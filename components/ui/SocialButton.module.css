@@ -1,0 +1,72 @@
+.socialButton {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    height: 100%;
+ 
+    
+  }
+  
+  .socialButton:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon {
+    width: 2rem;
+    height: 2rem;
+    color: rgb(255, 255, 255);
+
+  }
+  
+  .label {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .followButton {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 9999px;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .followButton:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .profileButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .profileButton a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .profileButton:hover {
+    background-color: #e55b00;
+  }
+  

@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    background-color: #d1653a;
+    background-image: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.image {
+    height: 600px;
+    border-radius: 8px;
+    margin-right: 40px;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    gap: 10px; /* Controla el espacio entre el título y la descripción (ajustado) */
+    padding: 50px;
+    border-radius: 10px;
+    background: rgba(243, 243, 243, 0.1);
+}
+
+.title {
+    @font-face {
+        font-family: 'Playfair Display';
+        src: url('../../Fuentes/PlayfairDisplay-Black.ttf');
+    }
+    font-size: 50px !important;
+    color: #ac6c0d;
+
+    
+    font-weight: 400;
+    margin-bottom: 0; /* Eliminar separación debajo del título */
+}
+
+.description {
+
+    @font-face {
+        font-family: 'Avenir';
+        src: url('../../Fuentes/AvenirLTStd-Black.otf');
+    }
+    font-size: 2.4rem !important;
+    line-height: 1.2;
+    color: #000000;
+   
+  
+    margin-top: 0; /* Eliminar margen superior */
+    word-wrap: break-word;
+}
+
+/* BioProfile.css */
+
+.button-link {
+    display: inline-block;
+    padding: 12px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #45a049;
+}
+
+.button-link:active {
+    background-color: #3e8e41;
+}

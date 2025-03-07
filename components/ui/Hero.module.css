@@ -1,0 +1,217 @@
+/* Contenedor principal */
+.hero {
+  display: flex;
+  justify-content: flex-end; /* Mantiene el contenido alineado a la derecha */
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  z-index: 1; /* Aseguramos que el contenedor principal esté encima del fondo */
+}
+
+/* Contenedor del fondo */
+.backgroundContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Asegura que esté detrás del contenido */
+}
+
+/* Imagen de fondo para escritorio */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../assets/INICIO.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+
+   /* Centrado y cubriendo todo */
+  z-index: 0; /* Detrás del contenido */
+}
+
+/* Imagen de fondo para móviles */
+.backgroundMobile {
+  display: none; /* Oculta la imagen de móvil por defecto */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('../../assets/1.png') center/cover no-repeat; /* Centrado y cubriendo todo */
+  z-index: 0; /* Detrás del contenido */
+}
+
+/* Imagen de fondo para dispositivos pequeños */
+@media (max-width: 768px) {
+  .background {
+    display: none; /* Oculta la imagen de escritorio */
+  }
+  .backgroundMobile {
+    display: block; /* Muestra la imagen de móvil */
+  }
+}
+
+/* Contenedor del contenido */
+.content {
+  text-align: right;
+  padding: 2rem;
+  color: #fff;
+  z-index: 1;
+  max-width: 700px; /* Ajustado para 1920px de ancho */
+}
+
+/* Logo */
+.logo {
+  width: 150px;
+  height: 150px;
+  background: url('/public/assets/MNA.png') right/contain no-repeat;
+  margin-left: 450px; /* Aumenta para mover más a la derecha */
+}
+
+/* Estilos de texto */
+.tag {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  word-spacing: 15px; /* Espaciado entre palabras */
+    font-family:'Avenir';
+  src: url('../../Fuentes/AvenirLTStd-Black.otf');
+}
+
+.quote {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  word-spacing: 0.25;
+  letter-spacing: -2px;
+  line-height: 1.0x;
+  word-wrap: break-word;
+  font-family:'Avenir';
+  src: url('../../Fuentes/AvenirLTStd-Black.otf');
+}
+
+.author {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Playfair Display';
+src: url('../../Fuentes/PlayfairDisplay-Black.ttf');
+}
+
+/* Botón */
+.button {
+  background-color: #B69D74;
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.button:hover {
+  background-color: #9a845f;
+}
+
+/* Íconos de redes sociales */
+.socialIcons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 30px;
+
+}
+
+.icon {
+  color: white;
+  transition: color 0.3s ease, transform 0.2s ease;
+  font-size: 4rem; /* Tamaño adaptativo */
+}
+
+.icon:hover {
+  color: #ffcc00;
+  transform: scale(1.2);
+}
+
+/* RESPONSIVIDAD */
+
+/* Para pantallas grandes (hasta 1600px) */
+@media (max-width: 1600px) {
+  .content {
+    max-width: 600px;
+  }
+  .quote {
+    font-size: 2.5rem;
+  }
+  .author {
+    font-size: 1.5rem;
+  }
+}
+
+/* Para pantallas medianas (hasta 1024px) */
+@media (max-width: 1024px) {
+  .content {
+    max-width: 450px;
+  }
+  .tag {
+    font-size: 1.2rem;
+  }
+  .quote {
+    font-size: 2rem;
+  }
+  .author {
+    font-size: 1.2rem;
+  }
+  .button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Para móviles (hasta 768px) */
+@media (max-width: 768px) {
+  .content {
+    max-width: 400px;
+    padding: 1.5rem;
+  }
+  .tag {
+    font-size: 1rem;
+  }
+  .quote {
+    font-size: 1.8rem;
+  }
+  .author {
+    font-size: 1.1rem;
+  }
+  .button {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Para pantallas pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  .content {
+    max-width: 90%;
+    padding: 1rem;
+  }
+  .tag {
+    font-size: 0.9rem;
+  }
+  .quote {
+    font-size: 1.5rem;
+  }
+  .author {
+    font-size: 1rem;
+  }
+  .button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
