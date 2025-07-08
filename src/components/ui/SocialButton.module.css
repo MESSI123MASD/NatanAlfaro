@@ -1,0 +1,258 @@
+/* Estilos generales */
+.socialButton {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden; /* Para asegurarnos que la imagen no sobresalga del borde */
+}
+
+/* Para agregar la imagen de fondo cuando se haga hover */
+.instagram:hover::before,
+.facebook:hover::before,
+.youtube:hover::before,
+.whatsapp:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Coloca la imagen debajo del contenido */
+  opacity: 0.3; /* Puedes ajustar la opacidad según lo que desees */
+}
+
+/* Instagram */
+.instagram:hover::before {
+  background-image: url('../../assets/fondo.png'); /* Aquí va la URL de la imagen */
+}
+
+.instagram:hover {
+  background-color:transparent; /* Color oficial de Instagram */
+}
+
+/* Facebook */
+.facebook:hover::before {
+  background-image: url('path_to_facebook_image.jpg'); /* Aquí va la URL de la imagen */
+}
+
+.facebook:hover {
+  background-color: #1877f2; /* Color oficial de Facebook */
+}
+
+/* YouTube */
+.youtube:hover::before {
+  background-image: url('path_to_youtube_image.jpg'); /* Aquí va la URL de la imagen */
+}
+
+.youtube:hover {
+  background-color: #ff0000; /* Color oficial de YouTube */
+}
+
+/* WhatsApp */
+.whatsapp:hover::before {
+  background-image: url('path_to_whatsapp_image.jpg'); /* Aquí va la URL de la imagen */
+}
+
+.whatsapp:hover {
+  background-color: #25d366; /* Color oficial de WhatsApp */
+}
+
+/* Para que los iconos se mantengan visibles en el hover */
+.instagram:hover .icon,
+.facebook:hover .icon,
+.youtube:hover .icon,
+.whatsapp:hover .icon {
+  color: white;
+}
+
+.label {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: rgb(255, 255, 255);
+}
+
+.followButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 9999px;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.followButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.profileButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.profileButton a {
+  text-decoration: none;
+  color: white;
+}
+
+.profileButton:hover {
+  background-color: #e55b00;
+}
+
+/* Contenedor para los botones sociales */
+.socialButtonsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Media queries para responsividad */
+
+/* Pantallas grandes y medianas (hasta 1200px) */
+@media (max-width: 1200px) {
+  .socialButtonsContainer {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+  }
+
+  .socialButton {
+    padding: 1.75rem;
+  }
+
+  .label {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablets (hasta 992px) */
+@media (max-width: 992px) {
+  .socialButtonsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .socialButton {
+    padding: 1.5rem;
+  }
+
+  .label {
+    font-size: 1.1rem;
+  }
+
+  .followButton {
+    padding: 0.4rem 1.25rem;
+    font-size: 0.8rem;
+  }
+
+  .profileButton {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Móviles (hasta 768px) */
+@media (max-width: 768px) {
+  .socialButtonsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .socialButton {
+    padding: 1.25rem;
+  }
+
+  .label {
+    font-size: 1rem;
+    margin-top: 0.75rem;
+  }
+
+  .followButton {
+    margin-top: 0.75rem;
+    padding: 0.4rem 1.25rem;
+    font-size: 0.75rem;
+  }
+
+  .profileButton {
+    margin-top: 15px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Móviles pequeños (hasta 576px) */
+@media (max-width: 576px) {
+  .socialButtonsContainer {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.75rem;
+  }
+
+  .socialButton {
+    padding: 1.25rem;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .label {
+    margin-top: 0;
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+
+  .followButton {
+    margin-top: 0;
+    margin-left: auto;
+    padding: 0.35rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .profileButton {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+/* Móviles muy pequeños (hasta 375px) */
+@media (max-width: 375px) {
+  .socialButton {
+    padding: 1rem 0.75rem;
+  }
+
+  .label {
+    font-size: 0.9rem;
+    margin-left: 0.75rem;
+  }
+
+  .followButton {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.7rem;
+  }
+}

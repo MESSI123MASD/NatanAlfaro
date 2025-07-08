@@ -1,0 +1,106 @@
+/* Estilo general del menú */
+.control-pane {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.control-section {
+    margin-top: 20px;
+}
+
+.menu-section {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-control {
+    width: 100%;
+}
+
+/* Estilos de los íconos y los elementos del menú */
+.e-menu-wrapper {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.e-menu-item {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.e-menu-item:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+
+.e-menu-item .e-icons {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.e-menu-item:active {
+    background-color: #007bff;
+    color: white;
+}
+
+.e-menu-item.e-selected {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Submenús */
+.e-menu-popup {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.e-menu .e-menu-item .e-menu-popup .e-menu-item {
+    padding-left: 30px;
+}
+
+.e-menu-item .e-menu-popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+.e-menu-item:hover .e-menu-popup {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Animación para submenús */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Separadores */
+.e-menu-item[separator] {
+    border-top: 1px solid #ddd;
+    margin: 8px 0;
+}
+
+/* Estilo para el menú cuando se está utilizando en dispositivos móviles */
+@media (max-width: 768px) {
+    .e-menu-wrapper {
+        display: block;
+    }
+
+    .e-menu-item {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,135 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinear los elementos a la izquierda */
+    padding: 2rem;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 1rem; /* Separar el carrusel del título y el párrafo */
+}
+
+.media {
+    width: 100%;
+    height: 20rem; /* Ajusta la altura para adaptarse bien al carrusel */
+    object-fit: cover; /* Asegura que la imagen cubra completamente el área disponible */
+}
+
+.item {
+    background-color: black;
+    margin: 0 1rem; /* Espacio entre elementos */
+}
+
+.index {
+    position: absolute;
+    top: 0.2rem;
+    font-size: 0.6rem; /* Hacer más pequeño el texto */
+    font-weight: bold;
+    font-family: Roboto;
+    color: black;
+    padding: 0.2rem 0.5rem;
+    background-color: lightgray;
+    left: 1rem;
+    opacity: 0.75;
+}
+
+.caption-container {
+    position: absolute;
+    bottom: 1rem;
+    left: 5%;
+    right: 5%;
+}
+
+.caption {
+    padding: 0.5rem;
+    font-size: 0.7rem; /* Hacer la leyenda más pequeña */
+    font-weight: bold;
+    font-family: Roboto;
+    background-color: lightgray;
+    color: black;
+    width: fit-content;
+    margin: 0 auto;
+    opacity: 0.75;
+}
+
+.btn-prev,
+.btn-next {
+    position: absolute;
+    font-size: 40px; /* Reducir el tamaño del icono */
+    color: lightgray;
+    cursor: pointer;
+    top: 9rem; /* Ajustar la posición vertical */
+}
+
+.btn-prev {
+    left: 1rem;
+}
+
+.btn-next {
+    right: 1rem;
+}
+
+@media (max-width: 600px) {
+    .media {
+        height: 15rem; /* Reducir aún más la altura en pantallas pequeñas */
+    }
+
+    .carousel {
+        width: 100%; /* Hacer que el carrusel ocupe el 100% en móviles */
+    }
+
+    .index {
+        font-size: 0.5rem; /* Hacer más pequeño el índice */
+        padding: 0.2rem 0.3rem;
+    }
+
+    .caption {
+        font-size: 0.6rem; /* Hacer la leyenda más pequeña en móviles */
+        padding: 0.3rem;
+    }
+
+    .btn-prev,
+    .btn-next {
+        font-size: 30px; /* Reducir el tamaño de los botones en móviles */
+        top: 7rem; /* Ajustar la posición de los botones */
+    }
+}
+
+@media (max-width: 900px) and (min-width: 601px) {
+    .media {
+        height: 18rem; /* Ajustar la altura en pantallas de tabletas */
+    }
+
+    .carousel {
+        width: 95%; /* Ajustar el ancho en pantallas de tabletas */
+    }
+
+    .index {
+        font-size: 0.6rem; /* Mantener un tamaño adecuado para tablets */
+    }
+
+    .caption {
+        font-size: 0.7rem; /* Mantener la legibilidad en tabletas */
+    }
+
+    .btn-prev,
+    .btn-next {
+        font-size: 40px; /* Ajustar el tamaño de los botones en tabletas */
+    }
+}
+
+.media iframe {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+
+/* Estilo para la imagen previa (miniatura) de los videos */
+.item iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se adapte completamente al contenedor */
+}

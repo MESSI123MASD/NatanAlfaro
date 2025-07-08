@@ -1,0 +1,77 @@
+/* Reset de márgenes y padding globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Asegura que no haya margen en toda la página */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Evita desbordamientos laterales */
+}
+
+/* Contenedor principal */
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  overflow: hidden;
+  margin-left: 0 !important; /* Asegura que no haya margen izquierdo */
+}
+
+/* Imagen de fondo */
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  background-color: rgb(23, 29, 34);
+}
+
+/* Contenedor en grid */
+.grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  height: 100%;
+  min-height: 80vh;
+  padding: 1rem;
+  margin-left: auto; /* Evita margen izquierdo forzado */
+  margin-right: auto; /* Mantiene alineación centrada */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Responsividad para pantallas medianas (hasta 992px) */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 60vh;
+  }
+
+  .header {
+    min-height: 60vh;
+  }
+}
+
+/* Responsividad para móviles (hasta 576px) */
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .header {
+    min-height: auto;
+  }
+}

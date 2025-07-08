@@ -1,0 +1,151 @@
+/* Importación de fuentes (corregido para estar fuera de los selectores) */
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('/fonts/PlayfairDisplay-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('/fonts/AvenirLTStd-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    background-color: #d1653a;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Contenido flexible */
+.content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Imagen */
+.image {
+    height: auto;
+    max-height: 500px;
+    width: auto;
+    max-width: 100%;
+    border-radius: 8px;
+ 
+    margin-left: -30rem; /* Ajusta este valor según cuánto quieras moverla */
+    object-fit: cover;
+}
+
+
+/* Contenedor de texto */
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    gap: 10px;
+    padding: 30px;
+
+    border-radius: 10px;
+    background: rgba(243, 243, 243, 0.1);
+    flex: 1;
+    max-width: 1000px; /* Ampliamos el ancho del contenedor */
+    min-height: 900px; /* Aumentamos la altura para más espacio */
+ 
+}
+
+ 
+
+
+
+
+/* Título */
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px !important;
+    color: #ac6c0d;
+    font-weight: 400;
+    margin-bottom: 0;
+    line-height: 1.2;
+    margin-left: 5rem !important;
+}
+
+/* Descripción */
+.description {
+    font-family: 'Avenir', sans-serif;
+    font-size: 2rem !important; 
+    line-height: 1.5; /* Aumenta la separación entre líneas */
+    color: #000000;
+    margin-top: 0;
+    word-wrap: break-word;
+    text-align: justify;
+    max-width: 100%; /* Hace que ocupe todo el ancho del contenedor */
+}
+
+/* Botón de enlace */
+.button-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    align-self: flex-start;
+
+    margin-left: 13rem;
+}
+
+.button-link:hover {
+    background-color: #45a049;
+}
+
+.button-link:active {
+    background-color: #3e8e41;
+}
+
+/* Media queries para responsividad */
+
+
+@media (max-width: 480px) {
+    .description {
+      max-width: 100%; /* Se ajusta al ancho disponible */
+      max-height: fit-content;
+      font-size: 1.4rem !important; /* Reduce el tamaño del texto */
+      text-align: justify; /* Justifica el texto */
+      line-height: 1.4; /* Espaciado entre líneas para mejorar la legibilidad */
+      word-wrap: break-word; /* Evita que palabras largas desborden */
+      margin: 0 auto; /* Centra el contenido */
+      padding: 1rem; /* Agrega espacio alrededor */
+    }
+    .image{
+     
+            height: auto;
+            max-height: 300px;
+            width: auto;
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 90rem;
+            margin-right: 70rem;
+             /* Ajusta este valor según cuánto quieras moverla */
+            object-fit: cover;
+        
+     
+    }
+  }
+  

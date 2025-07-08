@@ -1,0 +1,42 @@
+.loQueHacemosContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 200px;
+   background-image:url('../../assets/fondo.png');
+   background-size: cover;
+   
+
+}
+
+.infoBox {
+    width: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    font-family: 'Avenir';
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.carouselContainer {
+    width: 60%;
+    align-items: center;
+}
+
+.carouselContainer img, .carouselContainer video {
+    width: 100%;
+    height: 100x; /* Igual a width, creando un aspecto cuadrado */
+    object-fit: cover;
+    border-radius: 12px;
+    
+}

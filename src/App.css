@@ -1,0 +1,78 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para el cuerpo */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilo para los enlaces */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilo para los botones */
+  button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Logo */
+  .logo {
+    height: 40px;
+    margin: 10px;
+  }
+  
+  /* Estilo para el encabezado */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilo para la tarjeta */
+  .card {
+    background-color:blue;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card button {
+    margin-top: 10px;
+  }
+  
+  .read-the-docs {
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .read-the-docs a {
+    color: #0070f3;
+  }
+  

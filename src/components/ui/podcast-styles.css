@@ -1,0 +1,245 @@
+.container {
+  min-height: 70vh; /* Reducir la altura mínima de la página */
+  padding: 1rem; /* Reducir padding general */
+  background-color: #ffffff; /* Fondo blanco */
+  background-position: center; /* Centrar la imagen de fondo */
+  background-repeat: no-repeat; /* Evitar la repetición de la imagen */
+}
+
+.podcast-grid {
+  max-width: 900px; /* Reducir el ancho máximo */
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem; /* Reducir espacio entre columnas */
+}
+
+.podcast-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Reducir el gap entre elementos */
+}
+
+.label {
+  font-size: 1.5rem; /* Reducir tamaño de la etiqueta */
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 2.5rem; /* Reducir tamaño del título */
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.description {
+  font-size: 1rem; /* Reducir tamaño de la descripción */
+  color: #666;
+  margin: 0;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Reducir el espacio entre botones */
+}
+
+.btn {
+  padding: 0.5rem 1rem; /* Reducir el padding de los botones */
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.apple-btn {
+  background-color: #b68d40;
+  color: white;
+}
+
+.spotify-btn {
+  background-color: #1e3d59;
+  color: white;
+}
+
+.player-card {
+  background-color: rgba(243, 244, 246, 0.9);
+  border-radius: 1rem;
+  padding: 1rem; /* Reducir padding del reproductor */
+  backdrop-filter: blur(8px);
+  background-image: url('../../assets/fondo.png');
+}
+
+.episode-info {
+  display: flex;
+  gap: 1rem; /* Reducir el espacio entre imagen y texto */
+  margin-bottom: 1rem;
+}
+
+.episode-image {
+  width: 60px; /* Reducir tamaño de la imagen */
+  height: 60px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.episode-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.episode-title {
+  font-size: 2rem; /* Reducir el tamaño del título del episodio */
+  font-weight: 600;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.episode-author {
+  font-size: 1.5rem; /* Reducir tamaño de la fuente del autor */
+  color: #666;
+  margin: 0.25rem 0 0 0;
+}
+
+.player-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Reducir espacio entre botones */
+  
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.2s;
+  padding-top: 40rem;
+}
+
+.icon {
+  width: 1.5rem; /* Reducir tamaño de los íconos */
+  height: 1.5rem;
+  color: #1a1a1a;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem; /* Reducir espacio entre barra de progreso y tiempo */
+}
+
+.progress-bar {
+  position: relative;
+  height: 3px; /* Reducir altura de la barra de progreso */
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.progress-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem; /* Reducir tamaño del texto de tiempo */
+  color: #666;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2.2rem; /* Reducir tamaño del título en pantallas más grandes */
+  }
+}
+
+@media (min-width: 1024px) {
+  .podcast-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Evitar el modo oscuro en la página */
+@media (prefers-color-scheme: dark) {
+  .container {
+    background-color: #ffffff;
+  }
+
+  .title {
+    color: #1a1a1a;
+  }
+
+  .label,
+  .description {
+    color: #666;
+  }
+
+  .player-card {
+    background-color: rgba(243, 244, 246, 0.9);
+  }
+
+  .episode-title {
+    color: #1a1a1a;
+  }
+
+  .episode-author {
+    color: #666;
+  }
+
+  .icon {
+    color: #1a1a1a;
+  }
+
+  .progress-bar {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .progress-fill {
+    background-color: #1a1a1a;
+  }
+
+  .time-display {
+    color: #666;
+  }
+
+  .control-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.toggle-description-btn {
+  background-color: #f4f4f4;
+  padding: 5px 10px; /* Reducir padding */
+  margin-top: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.full-description {
+  margin-top: 5px;
+  font-size: 14px; /* Reducir tamaño de la descripción completa */
+  color: #555;
+}

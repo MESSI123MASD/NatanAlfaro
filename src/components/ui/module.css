@@ -1,0 +1,79 @@
+
+.cabeza {
+  position: relative;
+  min-height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  color: #000;
+  margin-bottom: 50px; /* Se añadió margen inferior para separar esta sección de la siguiente */
+}
+
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+ /* Cambia esta ruta si es necesario */
+ background-color: #3e8e41;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas horizontales */
+  gap: 20px;
+  padding: 10px;
+  height: 100%;
+  min-height: 80vh;
+}
+
+.gridItem {
+  background-color: #3498db; /* Color de fondo inicial */
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 300px; /* Altura uniforme para los elementos */
+}
+
+.gridItem:hover {
+  background-color: #45a049; /* Color de fondo al pasar el ratón */
+  transform: scale(1.05);
+}
+
+.gridItem:active {
+  background-color: #3e8e41; /* Color al hacer clic */
+  transform: scale(0.98);
+}
+
+.gridItem h2 {
+  color: white; /* Aseguramos que el texto sea visible sobre el fondo */
+  margin-top: 16px;
+}
+
+.gridItem a {
+  margin-top: 16px;
+  color: rgb(0, 0, 0); /* Color de texto para enlaces */
+  border: 1px solid white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gridItem a:hover {
+  background-color: white;
+  color: rgb(255, 10, 10); /* Cambio de color al pasar el ratón sobre el enlace */
+}

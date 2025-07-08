@@ -1,0 +1,216 @@
+.navbar {
+  position: fixed; /* Fija el navbar en la parte superior */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent; /* Fondo blanco */
+  transition: top 0.3s ease-in-out; /* Transición suave para ocultar el navbar */
+}
+
+.hidden {
+  top: -80px; /* Mueve el navbar fuera de la pantalla */
+}
+
+.container {
+  padding-top: 60px; /* Ajusta el contenido para que no se oculte debajo del navbar */
+}
+
+/* Puedes agregar aquí otros estilos, como la sombra al hacer scroll, si lo deseas */
+
+
+/* Contenedor del navbar */
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 2rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+/* Estilo general del logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* Estilo del logo con imagen */
+.logoImage {
+  width: clamp(50px, 7vw, 100px);
+  height: clamp(50px, 7vw, 90px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-right: 100px;
+}
+
+/* Menú de navegación */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  width: auto;
+  flex-wrap: nowrap;
+}
+
+/* Ítems del menú */
+.navItem {
+  text-decoration: none;
+  color: #000000;
+  font-size: clamp(1.5rem, 1vw, 1rem);
+  font-weight: 500;
+  padding: 0.2rem 0.5rem;
+  transition: color 0.2s, transform 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 6px;
+  background: rgb(236, 200, 132);
+}
+
+/* Hover de los ítems del menú */
+.navItem:hover {
+  color: #B69D74;
+  transform: scale(1.1);
+}
+
+/* Contenedor de cada item del menú */
+.navItemWrapper {
+  position: relative;
+}
+
+/* Submenú */
+.dropdown {
+  visibility: hidden; /* Oculto por defecto */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(189, 181, 181);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 300px;
+  z-index: 10;
+  padding: 1rem 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Mostrar submenú al pasar el mouse sobre el item */
+.navItemWrapper:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Ítems dentro del submenú */
+.dropdownItem {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #000000;
+}
+
+/* Submenú adicional */
+.subDropdown {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: rgb(170, 162, 162);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 250px;
+  z-index: 11;
+  padding: 1rem 0;
+}
+
+.dropdownItem:hover .subDropdown {
+  display: block;
+}
+
+/* Estilo al pasar el mouse por los ítems del submenú */
+.dropdownItem:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.dropdownItem:last-child {
+  border-bottom: none;
+}
+
+/* Menú móvil */
+.menuButton {
+  display: none;
+}
+
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: none !important; /* Esto asegura que no tenga fondo */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  max-height: 80vh;
+  z-index: 1001;
+  border-radius: 10px;
+  box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+/* Botón de cierre del menú móvil */
+.mobileNav .closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 95%;
+  }
+  .nav {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .menuButton {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  .mobileNav {
+    display: flex;
+    top: 10%;
+    right: 0;
+    width: 70%;
+    padding: 2rem;
+  }
+}
